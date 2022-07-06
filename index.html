@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>מר משכנתא - יחיאל מרדכי</title>
+</head>
+
+<body onload="init() ">
+    <section class="screen" onclick="toggleScreen()"></section>
+
+    <section class="contact-modal">
+        <h3 class="details-title">ליעוץ ראשוני השאירו פרטים</h3>
+        <form action="" class="form-container">
+            <input type="text" placeholder="שם מלא">
+            <input type="tel" placeholder="טלפון">
+            <button class="form-btn">תחזרו אלי</button>
+        </form>
+    </section>
+    <!-- navbar -->
+    <section class="main-navbar">
+        <img class="logo-img" src="img/logo.png" alt="">
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li> <a href="#customers">לקוחות מרוצים</a> </li>
+                <li> <a href="#services">השירותים שלנו</a></li>
+                <li> <a href="#about">אודותינו</a></li>
+                <li> <a href="#contact">צור קשר</a></li>
+            </ul>
+        </nav>
+        <button class="menu-btn" onclick="toggleScreen()">☰</button>
+    </section>
+
+    <!-- cover-img -->
+    <section class="cover-img">
+    </section>
+
+    <!-- title-container -->
+    <section class="title-container">
+        <!-- <h1 class="title">מר משכנתא - יחיאל מרדכי</h1> -->
+        <h3 class="subtitle">המשכנתא היא ההתחייבות הפיננסית הגדולה והמורכבת ביותר
+            שתעשו בחייכם.</h3>
+        <div class="section-intro"> לכן חשוב שבניית תמהיל המשכנתא תהיה מקצועית, יסודית ומותאמת במיוחד למשק הבית שלכם.
+            כיועץ משכנתאות שמכיר את המערכת הבנקאית מבפנים, אייצג אתכם מול הבנקים, אתאים עבורכם את המשכנתא הטובה ביותר
+            ואחסוך לכם עד מאות אלפי שקלים!</div>
+    </section>
+
+    <!-- contact-container -->
+    <section class="contact-container" id="contact">
+        <div class="phone-container">
+            <h3 class="phone-title">ליעוץ ראשוני ללא התחייבות</h3>
+            <p class="phone-subtitle">התקשרו עכשיו</p>
+            <div class="phone-number"> <a href="tel:+972507178844">050-7178844</a> </div>
+        </div>
+        <div class="details-container">
+            <h3 class="details-title">השאירו פרטים</h3>
+            <h4 class="details-subtitle">וחסכו הרבה כסף במשכנתא שלכם</h4>
+            <form action="" class="form-container">
+                <input type="text" placeholder="שם">
+                <input type="tel" placeholder="טלפון">
+                <input type="email" placeholder="מייל">
+                <input type="text" placeholder="תוכן ההודעה">
+                <button class="form-btn">שלח</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- about-container -->
+    <section class="about-container" id="about">
+        <div class="about-intro">
+            נעים מאוד, אני יחיאל, בעל תואר ראשון בכלכלה ומנהל עסקים, יועץ משכנתאות וכלכלת המשפחה.
+            <br>
+            בעברי עבדתי כיועץ עסקי בבנק גדול בארץ וליוויתי אלפי לקוחות, לאור ניסיוני התעסוקתי צברתי קשרים במערכת הבנקאית
+            המחייבים שיהיו ליועץ משכנתא טוב.
+            <br>
+            תפקידי כיועץ המשכנתא שלכם הוא לשמור על האינטרס שלכם בלבד, לחסוך לכם זמן וכאבי ראש בניהול המשא ומתן מול
+            הבנקים וכמובן למנוע אי עמידה בתשלומי המשכנתא לאורך כל תקופת ההלוואה והפסד הנכס וההון העצמי אותו ככל הנראה
+            חסכתם כל חייכם
+        </div>
+    </section>
+
+    <!-- services-container -->
+    <!-- <section class="services-container" id="services">
+        השירותים שלנו
+        <div>ייעוץ למשכנתא רגילה</div>
+        <div>מחזור משכנתא</div>
+        <div>הלוואה לכל מטרה</div>
+        <div>איחוד הלוואות</div>
+
+    </section> -->
+
+    <!-- recommend-container -->
+    <section class="recommend-container" id="customers">
+
+        <div class="recommends"></div>
+        <div class="arrows">
+            <img src="icons/right-arrow.png" onclick="renderMoreRecommends(-1)">
+            <img src="icons/left-arrow.png" onclick="renderMoreRecommends(1)">
+        </div>
+    </section>
+
+    <!-- banks-imgs-container -->
+    <section class="banks-container">
+    </section>
+
+    <section class="footer">
+        <nav class="footer-nav">
+            <ul class="contact-list">
+                <li> יחיאל מרדכי יעוץ משכנתאות </li>
+                <li> טלפון : <a href="tel:+972507178844">050-7178844</a> </li>
+                <li> הכתובת שלנו : <a href="">יפה נוף 19 קרני שומרון</a></li>
+            </ul>
+            <ul class="info-list-1">
+                <li> <a href="">משכתנא לרכישה</a></li>
+                <li> <a href="">משכנתא למשקיעים</a></li>
+                <li> <a href="">משכנתא לכל מטרה</a></li>
+                <li> <a href="">משכנתא לעולים חדשים</a></li>
+            </ul>
+            <ul class="info-list-2">
+                <li> <a href="">ריביות משכנתא</a></li>
+                <li> <a href="">אודות המשרד</a></li>
+                <li> <a href="">צור קשר</a></li>
+                <li> <a href="">מדיניות פרטיות</a></li>
+            </ul>
+        </nav>
+        <img class="logo-img" src="img/logo2.png" alt="">
+    </section>
+
+
+
+    <script src="js/service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
