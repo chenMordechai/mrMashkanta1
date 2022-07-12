@@ -143,6 +143,22 @@ h3.subtitle {
     font-size: 2rem;
 }
 
+/* services-container */
+
+.services-container {
+    background-color: grey;
+}
+
+.services-container .services {
+    display: flex;
+    justify-content: space-around;
+}
+
+.services-container .services div {
+    border: 3px solid white;
+    width: 12%;
+}
+
 /* ---- contact ---- */
 
 .contact-container {
@@ -232,7 +248,18 @@ h3.subtitle {
     color: white;
 }
 
+/* process-container */
+
+.process-container .work-process {
+    display: flex;
+    line-height: normal;
+}
+
 /* recommend-container */
+
+.recommend-container {
+    box-shadow: 0px 0px 21px 5px rgba(0, 0, 0, 0.75);
+}
 
 .recommends {
     display: flex;
