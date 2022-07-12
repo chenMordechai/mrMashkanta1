@@ -152,11 +152,14 @@ h3.subtitle {
 .services-container .services {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .services-container .services div {
     border: 3px solid white;
-    width: 12%;
+    width: 200px;
+    height: 50px;
+    margin: 10px;
 }
 
 /* ---- contact ---- */
@@ -253,8 +256,12 @@ h3.subtitle {
 .process-container .work-process {
     display: flex;
     line-height: normal;
+    flex-wrap: wrap;
 }
 
+.process-container .work-process li {
+    margin: 20px;
+}
 /* recommend-container */
 
 .recommend-container {
