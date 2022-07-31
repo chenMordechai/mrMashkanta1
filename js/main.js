@@ -20,7 +20,7 @@ function renderRecommends() {
     var recommends = getRecommends()
     var numOfRecommends = getNumOfRecommends();
     for (var i = 0; i < numOfRecommends; i++) {
-        strHtml += `<div class="recommend">${recommends[i].id} ${recommends[i].text}</div>`
+        strHtml += `<div class="recommend-container" ><div class="recommend">${recommends[i].id} ${recommends[i].text}</div></div>`
     }
     document.querySelector('.recommends').innerHTML = strHtml
 
