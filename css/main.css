@@ -143,7 +143,8 @@ body.open-contact-modal .screen {
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-position: center center;
-    height: 85vh;
+    height: 80vh;
+    /* height: 540px; */
     width: 100%;
     margin-top: 160px;
 }
@@ -151,9 +152,12 @@ body.open-contact-modal .screen {
 /* ---- title ---- */
 
 .title-container {
-    /* margin-bottom: 20px; */
-    /* box-shadow: 0px 0px 21px 5px rgba(0, 0, 0, 0.75); */
-    padding: 80px;
+    padding: 70px;
+    background-image: url(../img/mashkanta/yechiel_pic2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 .title-container .subtitle-container {
@@ -165,7 +169,7 @@ h3.subtitle {
     font-weight: 300;
     margin: 10px;
     color: #c0333c;
-    margin: 10px 0px;
+    margin: 0px;
 }
 
 .section-intro {
@@ -367,7 +371,7 @@ img {
     border: 2px solid #444141;
     height: 90px;
     border-radius: 20px;
-    width: 576px;
+    max-width: 576px;
     margin: 15px;
 }
 
@@ -457,10 +461,13 @@ img {
 @media (max-width: 900px) {
     html {
         font-size: 14px;
-        line-height: 35px;
+        line-height: 2.5rem;
     }
 
     /* ---- navbar ---- */
+    .main-navbar {
+        height: 120px;
+    }
 
     .main-navbar .menu-btn {
         display: block;
@@ -478,6 +485,10 @@ img {
         display: flex;
         align-items: center;
         padding: 20px 0px;
+    }
+
+    .logo-img {
+        height: 70px;
     }
 
     .main-nav ul.main-nav-list li {
@@ -508,11 +519,23 @@ img {
 
     .cover-img {
         background-image: url(../img/mashkanta/yechiel_mobile_pic1.png);
-        background-size: contain;
-        background-position: top;
+        background-size: cover;
+        /* background-position: top; */
+        background-position: top center;
+        /* height: 540px; */
+        height: 62vw;
+        margin-top: 120px;
     }
 
     /* ---- title ---- */
+
+    .title-container {
+        padding: 50px;
+    }
+
+    .title-container .subtitle-container {
+        width: 100%;
+    }
 
     /* ---- contact ---- */
 
