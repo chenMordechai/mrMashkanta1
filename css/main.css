@@ -95,8 +95,8 @@ body.open-contact-modal .screen {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 56%;
-    font-size: 1.6rem;
+    width: 52%;
+    font-size: 1.5rem;
     margin-left: 35px;
 }
 
@@ -119,9 +119,10 @@ body.open-contact-modal .screen {
 }
 
 .main-nav ul.main-nav-list li {
-    background: linear-gradient(to left, #b4924e 0%, #c7a767 12%, #d8b97b 47%, #e0c48b 100%) left bottom
+    background: linear-gradient(to right, #b4924e 0%, #c7a767 12%, #d8b97b 47%, #f5e3bd 100%) left bottom
         rgb(252, 251, 251) no-repeat;
-    background-size: 100% 5px;
+    background-size: 100% 4px;
+    width: 140px;
 }
 
 .main-nav ul.main-nav-list a {
