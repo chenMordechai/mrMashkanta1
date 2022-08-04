@@ -79,7 +79,7 @@ body.open-contact-modal .screen {
     align-items: center;
     padding: 7px;
     padding-left: 15px;
-    height: 180px;
+    height: 160px;
     position: fixed;
     top: 0px;
     z-index: 10;
@@ -100,6 +100,16 @@ body.open-contact-modal .screen {
     margin-left: 35px;
 }
 
+.main-nav .phone-number {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav .phone-number img {
+    height: 38px;
+    margin-right: 10px;
+}
+
 .main-nav ul.main-nav-list {
     display: flex;
     flex-direction: row;
@@ -109,11 +119,6 @@ body.open-contact-modal .screen {
 }
 
 .main-nav ul.main-nav-list li {
-    /* width: 152px; */
-    /* border-bottom: 6px solid #b3914c; */
-    /* border-width: 3px;
-    border-style: solid; */
-    /* border-image: linear-gradient(to bottom, red, rgba(0, 0, 0, 0)) 50 100%; */
     background: linear-gradient(to left, #b4924e 0%, #c7a767 12%, #d8b97b 47%, #e0c48b 100%) left bottom
         rgb(252, 251, 251) no-repeat;
     background-size: 100% 5px;
@@ -124,7 +129,8 @@ body.open-contact-modal .screen {
 }
 
 .logo-img {
-    height: 170px;
+    height: 90px;
+    margin-right: 30px;
     /* width: 200px; */
 }
 
@@ -138,7 +144,7 @@ body.open-contact-modal .screen {
     background-position: center center;
     height: 85vh;
     width: 100%;
-    margin-top: 180px;
+    margin-top: 160px;
 }
 
 /* ---- title ---- */
@@ -497,57 +503,13 @@ img {
 
     /* ---- title ---- */
 
-    .title-container {
-        background-color: black;
-        color: white;
-    }
-
     /* ---- contact ---- */
-
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .phone-container {
-        margin-bottom: 30px;
-        width: 80%;
-    }
-
-    .details-container {
-        width: 80%;
-    }
 
     /* ---- about ---- */
 
-    .about-container {
-        background-color: #fff;
-        color: black;
-    }
-
     /* ---- banks-imgs ---- */
-    .banks-container .inner img {
-        height: 20px;
-        /* animation */
-    }
 
     /* ---- footer ---- */
-    .footer {
-        flex-direction: column;
-    }
-
-    .footer .footer-nav ul {
-        padding: 0px;
-    }
-    .footer .footer-nav .contact-list {
-        width: 100%;
-    }
-    .footer .footer-nav .info-list-1 {
-        width: 50%;
-    }
-    .footer .footer-nav .info-list-2 {
-        width: 50%;
-    }
 }
 
 @keyframes rightLeft {
