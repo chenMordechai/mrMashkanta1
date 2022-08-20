@@ -1,0 +1,72 @@
+/* ---- contact-modal ---- */
+
+/* ---- navbar ---- */
+.main-navbar {
+    height: 120px;
+}
+
+.main-navbar .menu-btn {
+    display: block;
+}
+
+.main-nav {
+    position: fixed;
+    right: 0px;
+    top: 120px;
+    background-color: black;
+    transform: translate(110%, 0);
+    transition: transform 0.6s;
+    /* z-index: 30; */
+    width: 220px;
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.logo-img {
+    height: 70px;
+}
+
+.main-nav ul.main-nav-list li {
+    background-color: #000000;
+}
+
+.main-nav ul.main-nav-list li a {
+    color: white;
+}
+
+.main-nav .phone-number a {
+    color: white;
+}
+
+body.open-menu .main-nav {
+    transform: translate(0%, 0);
+}
+
+.main-nav ul.main-nav-list {
+    flex-direction: column;
+}
+
+body.open-menu .screen {
+    display: block;
+}
+
+/* ---- cover-img ---- */
+
+/* ---- title ---- */
+
+/* ---- mini-contact ---- */
+
+/* ---- about ---- */
+
+/* services-container */
+
+/* process-container */
+
+/* recommend-container */
+
+/* ---- contact ---- */
+
+/* ---- banks-imgs ---- */
+
+/* ---- footer ---- */
