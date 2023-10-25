@@ -5,25 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/animate.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/3b2ba1220a.js" crossorigin="anonymous"></script>
     <title>מר משכנתא - יחיאל מרדכי</title>
 </head>
 
 <body onload="init() ">
     <section class="screen" onclick="toggleScreen()"></section>
 
+    <!-- contact-modal -->
     <section class="contact-modal">
-        <h3 class="details-title">ליעוץ ראשוני השאירו פרטים</h3>
+        <button onclick="closeContactModal()" class="close-contact-modal"><i class="fa-solid fa-x"></i></button>
+        <h3 class="details-title">לשיחת ייעוץ <span>חינם</span> השאירו פרטים!</h3>
         <form action="" class="form-container">
             <input type="text" placeholder="שם מלא">
             <input type="tel" placeholder="טלפון">
+            <input type="email" placeholder="אימייל">
+            <textarea class="content" placeholder="תוכן ההודעה"></textarea>
             <button class="form-btn">תחזרו אלי</button>
         </form>
     </section>
+
     <!-- navbar -->
     <section class="main-navbar">
         <img class="logo-img" src="img/mashkanta/yechiel_pic27.png">
@@ -39,7 +46,7 @@
                 <li> <a href="#contact">צור קשר</a></li>
             </ul>
         </nav>
-        <button class="menu-btn" onclick="toggleScreen()">☰</button>
+        <button class="menu-btn" onclick="toggleScreen()"><span></span></button>
     </section>
 
     <!-- cover-img -->
@@ -64,21 +71,7 @@
                     היכולות
                     הפיננסיות שלכם ולחסוך לכם אלפי שקלים!
                 </span>
-                <!DOCTYPE html>
-                <html lang="en">
 
-                <head>
-                    <meta charset="UTF-8">
-                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Document</title>
-                </head>
-
-                <body>
-
-                </body>
-
-                </html>
             </div>
         </div>
     </section>
@@ -184,10 +177,10 @@
                 <div class="side-one">
                     <input type="text" placeholder="שם">
                     <input type="tel" placeholder="טלפון">
-                    <input type="email" placeholder="מייל">
+                    <input type="email" placeholder="אימייל">
                 </div>
                 <div class="side-two">
-                    <input class="content" type="text" placeholder="תוכן ההודעה">
+                    <textarea class="content" placeholder="תוכן ההודעה" cols="30" rows="10"></textarea>
                     <button class="form-btn">שלח <img src="img/mashkanta/yechiel_pic37.png"></button>
 
                 </div>
@@ -219,7 +212,7 @@
                 <p>OFFICE@MRMASHKANTA.CO.IL</p>
             </div>
 
-            <img class="logo-img" src="img/mashkanta/yechiel_pic23.png">
+            <!-- <img class="logo-img" src="img/mashkanta/yechiel_pic23.png"> -->
         </div>
     </section>
 

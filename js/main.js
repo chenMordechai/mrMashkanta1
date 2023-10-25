@@ -5,7 +5,7 @@ let gIsContactModalOpen = false;
 function init() {
     createRecommends()
     renderRecommends()
-    // setTimeout(openContactModal, 1000)
+    // setTimeout(openContactModal, 3000)
     // openContactModal()
 
     // createBanksNames()
@@ -16,9 +16,9 @@ function init() {
 // -------------------------------------------------------------
 
 function renderRecommends() {
-    var strHtml = '';
-    var recommends = getRecommends()
-    var numOfRecommends = getNumOfRecommends();
+    let strHtml = '';
+    const recommends = getRecommends()
+    const numOfRecommends = getNumOfRecommends();
     for (var i = 0; i < numOfRecommends; i++) {
         strHtml += `<div class="recommend-container" ><div class="recommend">${recommends[i].id} ${recommends[i].text}</div></div>`
     }
@@ -34,9 +34,9 @@ function renderMoreRecommends(diff) {
 // ------------------------------------------------------------
 
 function renderBanksImges() {
-    var strHtml = '';
-    var banksNames = getBanksNames()
-    var numOfBanks = getNumOfBanks()
+    let strHtml = '';
+    const banksNames = getBanksNames()
+    const numOfBanks = getNumOfBanks()
     for (var i = 0; i < numOfBanks; i++) {
         strHtml += `<div class="inner" style="animation: scroll-left 15s ${i * 2}s linear infinite;">
          <img class="bank-img" src="img/banks/${banksNames[i]}.png" />
@@ -64,15 +64,22 @@ function toggleScreen() {
         gIsContactModalOpen = false
     } else {
         document.body.classList.toggle('open-menu');
-        if (document.querySelector('.menu-btn').innerText === "☰") {
-            document.querySelector('.menu-btn').innerHTML = "X"
-        } else {
-            document.querySelector('.menu-btn').innerHTML = "☰"
-        }
+        // if (document.querySelector('.menu-btn').innerText === "☰") {
+        //     document.querySelector('.menu-btn').innerHTML = "X"
+        // } else {
+        //     document.querySelector('.menu-btn').innerHTML = "☰"
+        // }
     }
 }
+
 function openContactModal() {
     document.querySelector('.contact-modal').style.display = 'block';
-    document.body.classList.toggle('open-contact-modal');
+    document.body.classList.add('open-contact-modal');
     gIsContactModalOpen = true;
+}
+
+function closeContactModal() {
+    document.querySelector('.contact-modal').style.display = 'none';
+    document.body.classList.remove('open-contact-modal');
+    gIsContactModalOpen = false;
 }

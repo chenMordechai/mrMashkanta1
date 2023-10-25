@@ -58,8 +58,7 @@ function createRecommends() {
 }
 
 function getRecommends() {
-    let recommends = gRecommends.slice(0, gNumOfRecommends)
-    return recommends
+    return gRecommends.slice(0, gNumOfRecommends)
 }
 
 function changeRecommendsOrder(diff) {
@@ -82,7 +81,7 @@ function getNumOfBanks() {
 
 function getBanksNames() {
     if (gBanksRange === gBanksNames.length) gBanksRange = 0
-    let banksNames = gBanksNames.slice(gBanksRange, gNumOfBanks + gBanksRange)
+    const banksNames = gBanksNames.slice(gBanksRange, gNumOfBanks + gBanksRange)
     if (banksNames.length === gNumOfBanks) return banksNames
     else {
         if (gBanksRange > 0) {
