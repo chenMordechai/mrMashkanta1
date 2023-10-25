@@ -180,8 +180,12 @@ body.open-menu .screen {
 
 /* services-container */
 
+.services-container .services div {
+    flex-basis: 30vw;
+}
+
 .services-container .services img {
-    height: 50px;
+    height: 80px;
 }
 
 /* process-container */

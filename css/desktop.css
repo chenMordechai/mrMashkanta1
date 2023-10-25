@@ -334,30 +334,34 @@ button::after {
 /* services-container */
 
 .services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
     background-image: url(../img/mashkanta/yechiel_pic11.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-    padding: 90px 70px;
-    height: 610px;
+    padding: var(--section-padding);
+    /* height: 610px; */
 }
 
 .services-container h3 {
     font-size: 3rem;
-    margin-bottom: 90px;
-    font-weight: 400;
 }
 
 .services-container .services {
     display: flex;
-    justify-content: space-around;
+    /* align-items: center; */
     flex-wrap: wrap;
+    gap: 20x;
 }
 
 .services-container .services div {
-    width: 15%;
-    height: 50px;
-    margin: 10px;
+    flex-grow: 1;
+    flex-basis: 250px;
+    /* margin: 10px; */
+
     font-size: 1rem;
 }
 
