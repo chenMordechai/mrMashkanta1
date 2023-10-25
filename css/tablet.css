@@ -1,3 +1,8 @@
+:root {
+    --main-navbar-height: 195px;
+    --section-padding: 50px;
+}
+
 html {
     font-size: 14px;
     line-height: 2.5rem;
@@ -48,8 +53,14 @@ html {
 
 /* ---- title ---- */
 
+.background {
+    background-color: grey;
+}
+
 .title-container {
+    background-position: 15% center;
     padding: 50px;
+    opacity: 0.8;
 }
 
 .title-container .subtitle-container {

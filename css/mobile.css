@@ -2,6 +2,10 @@
     /* outline: 2px solid orange; */
 }
 
+:root {
+    --main-navbar-height: 130px;
+}
+
 html {
     /* font-size: 12px; */
 }
@@ -71,7 +75,7 @@ body.open-menu .main-navbar .menu-btn span::after {
     position: fixed;
     left: 0px;
     top: 130px;
-    /* z-index: 30; */
+    /* z-index: 40; */
 
     display: flex;
     flex-direction: column;
@@ -134,9 +138,45 @@ body.open-menu .screen {
 
 /* ---- title ---- */
 
+.title-container {
+    background-position: 26% center;
+}
+
 /* ---- mini-contact ---- */
+.mini-contact-container h2 {
+    font-size: clamp(1.8rem, 6vw, 3.5rem);
+    /* font-size: 2.3rem; */
+}
+
+.mini-contact-container button {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+}
+/* .mini-contact-container h2::after {
+    content: "";
+    background: none;
+} */
 
 /* ---- about ---- */
+
+.about-container {
+    background-image: url(../img/mashkanta/yechiel_pic33.png);
+}
+
+.about-container .about-intro {
+    width: 100%;
+}
+
+.about-container img {
+    display: block;
+    float: left;
+    /* border-radius: 7px; */
+
+    border-radius: 50%;
+    shape-outside: ellipse();
+
+    height: 200px;
+    margin-inline-start: 1.5em;
+}
 
 /* services-container */
 
