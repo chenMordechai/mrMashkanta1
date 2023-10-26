@@ -343,7 +343,6 @@ button::after {
     background-repeat: no-repeat;
     background-position: bottom;
     padding: var(--section-padding);
-    /* height: 610px; */
 }
 
 .services-container h3 {
@@ -354,13 +353,12 @@ button::after {
     display: flex;
     /* align-items: center; */
     flex-wrap: wrap;
-    gap: 20x;
+    gap: 30x;
 }
 
 .services-container .services div {
     flex-grow: 1;
     flex-basis: 250px;
-    /* margin: 10px; */
 
     font-size: 1rem;
 }
@@ -375,6 +373,7 @@ button::after {
 }
 
 /* process-container */
+
 .process-container {
     background-image: url(../img/mashkanta/yechiel_pic33.png);
     background-size: cover;
@@ -382,7 +381,7 @@ button::after {
     background-position: bottom;
     /* background-color: black; */
     color: white;
-    padding: 50px;
+    padding: var(--section-padding);
 }
 
 .process-container h3 {
@@ -392,16 +391,22 @@ button::after {
 
 .process-container .work-process {
     display: flex;
-    line-height: normal;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 0px;
+    gap: 20px;
+
+    line-height: normal;
 }
 
 .process-container .work-process li {
-    margin: 20px;
+    /* margin: 20px; */
     display: flex;
     align-items: flex-end;
+    justify-content: center;
+
+    flex-basis: clamp(240px, 40%, 300px);
+    flex-grow: 1;
+    /* justify-content: start; */
 }
 
 .process-container .work-process li div.number {
@@ -414,7 +419,7 @@ button::after {
 }
 .process-container .work-process li div.text {
     font-size: 1.7rem;
-    width: 288px;
+    /* width: 288px; */
     text-align: right;
     margin-right: 10px;
 }

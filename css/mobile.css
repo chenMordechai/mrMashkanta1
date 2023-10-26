@@ -4,6 +4,7 @@
 
 :root {
     --main-navbar-height: 130px;
+    --section-padding: 50px;
 }
 
 html {
@@ -191,8 +192,13 @@ body.open-menu .screen {
 /* process-container */
 
 .process-container .work-process {
-    /* flex-direction: column; */
-    display: block;
+    justify-content: start;
+    /* width: 80%; */
+    /* margin: auto; */
+}
+
+.process-container .work-process li {
+    justify-content: start;
 }
 
 /* recommend-container */
