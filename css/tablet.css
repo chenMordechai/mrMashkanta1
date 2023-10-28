@@ -53,18 +53,18 @@ html {
 
 /* ---- title ---- */
 
-.background {
+/* .background {
     background-color: grey;
-}
+} */
 
 .title-container {
-    background-position: 15% center;
+    /* background-position: 15% center;
     padding: 50px;
-    opacity: 0.8;
+    opacity: 0.8; */
 }
 
 .title-container .subtitle-container {
-    width: 100%;
+    text-align: justify;
 }
 
 /* ---- mini-contact ---- */

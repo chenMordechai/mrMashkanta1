@@ -139,8 +139,17 @@ body.open-menu .screen {
 
 /* ---- title ---- */
 
+.background-fixed {
+    background-position: 25%;
+}
+
 .title-container {
-    background-position: 26% center;
+    /* background-position: 26% center; */
+}
+
+.title-container .subtitle-container {
+    width: 100%;
+    text-align: right;
 }
 
 /* ---- mini-contact ---- */

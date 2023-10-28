@@ -1,3 +1,4 @@
+'use strict'
 
 let gBanksIntervel;
 let gIsContactModalOpen = false;

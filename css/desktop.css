@@ -214,19 +214,41 @@ body.open-contact-modal .screen {
 
 /* ---- title ---- */
 
+.background-fixed {
+    background-image: url(../img/mashkanta/yechiel_pic28.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    /* z-index usage is up to you.. although there is no need of using it because the default stack context will work. */
+    z-index: -1;
+    top: 0px;
+}
+
 .title-container {
     padding: var(--section-padding);
-    background-image: url(../img/mashkanta/yechiel_pic28.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
+    position: relative;
 }
 
 .title-container .subtitle-container {
     width: 50%;
     text-align: right;
 }
+
+/* .title-container {
+    padding: var(--section-padding);
+    background-image: url(../img/mashkanta/yechiel_pic28.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.title-container .subtitle-container {
+    width: 50%;
+    text-align: right;
+} */
 
 h3.subtitle {
     font-size: var(--header-font-size);
