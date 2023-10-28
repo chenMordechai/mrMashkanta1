@@ -141,6 +141,7 @@ body.open-menu .screen {
 
 .background-fixed {
     background-position: 25%;
+    filter: blur(1px) contrast(0.8);
 }
 
 .title-container {

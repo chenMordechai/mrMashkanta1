@@ -303,6 +303,7 @@ button::after {
 
 .mini-contact-container button::after {
     background-image: url(../img/mashkanta/yechiel_pic22.png);
+    animation: tada 1s;
 }
 
 /* .mini-contact-container img {
