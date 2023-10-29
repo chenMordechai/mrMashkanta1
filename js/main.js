@@ -3,9 +3,18 @@
 let gBanksIntervel;
 let gIsContactModalOpen = false;
 
+const gElCarousel = document.querySelector('.carousel')
+const gElcardsContainer = document.querySelector('.cards-container')
+let gInitPos = null
+let gIsMoving = false
+let gTransform = 100
+
 function init() {
     createRecommends()
-    renderRecommends()
+    renderAllRecommends()
+    addListeners()
+    // renderRecommends()
+
     // setTimeout(openContactModal, 3000)
     // openContactModal()
 
@@ -15,6 +24,15 @@ function init() {
 }
 
 // -------------------------------------------------------------
+
+function renderAllRecommends() {
+    let strHtml = '';
+    const recommends = getAllRecommends()
+    for (var i = 0; i < recommends.length; i++) {
+        strHtml += `<div class="card" ><div class="card-details">${recommends[i].id} ${recommends[i].text}</div></div>`
+    }
+    document.querySelector('.cards-container').innerHTML = strHtml
+}
 
 function renderRecommends() {
     let strHtml = '';
@@ -32,6 +50,62 @@ function renderMoreRecommends(diff) {
     renderRecommends()
 }
 
+///////////////////////////////////////////////////////////////////////////////
+
+function addListeners() {
+    addMouseListeners()
+    addTouchListeners()
+}
+
+function addMouseListeners() {
+    gElCarousel.addEventListener('mousedown', onDown)
+    gElCarousel.addEventListener('mousemove', onMove)
+    gElCarousel.addEventListener('mouseup', onUp)
+}
+
+function addTouchListeners() {
+    gElCarousel.addEventListener('pointerdown', onDown)
+    gElCarousel.addEventListener('pointermove', onMove)
+    gElCarousel.addEventListener('pointerup', onUp)
+}
+
+function onDown(ev) {
+    console.log('down')
+    gIsMoving = true
+    gInitPos = ev.pageX
+
+    const trans = gElcardsContainer.style.transform
+    console.log('trans:', trans)
+    gTransform = +trans.substring(trans.indexOf('(') + 1, trans.indexOf('p'))
+    // console.log('x:', x)
+    // currTransform = +x
+    // currTransform = gLastTransform
+
+
+}
+
+function onMove(ev) {
+    if (!gIsMoving) return
+    console.log('move:')
+    const currPos = ev.pageX
+    var diff = currPos - gInitPos
+    // console.log('diff:', diff)
+    // console.log('newTrans + diff:', newTrans + diff)
+    gElcardsContainer.style.transform = `translateX(${gTransform + diff}px)`
+
+}
+
+function onUp() {
+    gIsMoving = false
+
+}
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
 // ------------------------------------------------------------
 
 function renderBanksImges() {

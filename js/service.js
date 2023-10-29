@@ -1,4 +1,4 @@
-
+'use strict'
 
 let gBanksNames;
 let gBanksRange = 0
@@ -8,11 +8,6 @@ let gNextId = 1
 let gRecommends;
 let gNumOfRecommends = 3;
 let gRecommendsRange = 0
-
-
-function getNumOfRecommends() {
-    return gNumOfRecommends
-}
 
 function createRecommends() {
     gRecommends = [
@@ -55,6 +50,14 @@ function createRecommends() {
     ]
 
 
+}
+
+function getAllRecommends() {
+    return gRecommends
+}
+
+function getNumOfRecommends() {
+    return gNumOfRecommends
 }
 
 function getRecommends() {

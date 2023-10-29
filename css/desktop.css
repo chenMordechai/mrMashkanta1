@@ -303,7 +303,7 @@ button::after {
 
 .mini-contact-container button::after {
     background-image: url(../img/mashkanta/yechiel_pic22.png);
-    animation: tada 1s;
+    animation: tada 1.5s infinite;
 }
 
 /* .mini-contact-container img {
@@ -450,33 +450,49 @@ button::after {
 /* recommend-container */
 
 .recommends-container {
-    /* box-shadow: 0px 0px 21px 5px rgba(0, 0, 0, 0.75); */
-    padding: 90px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 2.5em;
+    /* box-shadow: 0px 0px 21px 5px rgba(0, 0, 0, 0.75); */
+    /* padding: var(--section-padding); */
     background-image: linear-gradient(to right, #e7d8bb, #bb9343);
 }
 
-.recommends {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+.recommends-container h3 {
+    font-size: 3rem;
 }
 
-.recommends .recommend-container {
-    height: 200px;
-    width: 30%;
-    height: 17vw;
-    /* border: 3px solid black; */
-    background-color: #fff;
+.recommends-container .carousel {
+    position: relative;
+    overflow: hidden;
+
+    /* width: 100vw; */
+    height: 250px;
+}
+
+.recommends-container .carousel .cards-container {
+    position: absolute;
+    left: 20px;
     display: flex;
-    /* text-align: center; */
+
+    touch-action: none;
+    /* transform: translateX(-180px); */
+}
+
+.cards-container .card {
+    display: flex;
     align-items: center;
     justify-content: center;
+
+    height: 200px;
+    width: 200px;
+    margin-inline-start: 20px;
+    /* height: 17vw; */
+    /* border: 3px solid black; */
+    background-color: #fff;
 }
 
-.recommends .recommend {
+.cards-container .card .card-details {
     width: 95%;
     height: 96%;
     /* border: 2px solid black; */
