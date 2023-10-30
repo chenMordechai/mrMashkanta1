@@ -136,7 +136,9 @@ body.open-menu .screen {
 }
 
 /* ---- cover-img ---- */
-
+.cover-img {
+    height: 90vw;
+}
 /* ---- title ---- */
 
 .background-fixed {
