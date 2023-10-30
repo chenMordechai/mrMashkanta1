@@ -454,7 +454,7 @@ button::after {
     flex-direction: column;
     gap: 2.5em;
     /* box-shadow: 0px 0px 21px 5px rgba(0, 0, 0, 0.75); */
-    /* padding: var(--section-padding); */
+    padding: var(--section-padding) 0px;
     background-image: linear-gradient(to right, #e7d8bb, #bb9343);
 }
 
@@ -467,7 +467,8 @@ button::after {
     overflow: hidden;
 
     /* width: 100vw; */
-    height: 250px;
+    /* height: 250px; */
+    height: 22.1vw;
 }
 
 .recommends-container .carousel .cards-container {
@@ -484,21 +485,25 @@ button::after {
     align-items: center;
     justify-content: center;
 
-    height: 200px;
-    width: 200px;
+    width: 26vw;
+    height: 22.1vw;
+
     margin-inline-start: 20px;
-    /* height: 17vw; */
-    /* border: 3px solid black; */
     background-color: #fff;
 }
 
 .cards-container .card .card-details {
     width: 95%;
-    height: 96%;
+    height: 95%;
     /* border: 2px solid black; */
     border-width: 3px;
     border-style: solid;
     border-image: linear-gradient(to right, #e7d8bb, #b79755) 1;
+}
+
+.cards-container .card .card-details img {
+    height: 100%;
+    background-image: url();
 }
 
 .arrows {
@@ -515,8 +520,12 @@ button::after {
 /* ---- contact ---- */
 
 .contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+
     background-color: #e3e3e3;
-    padding: 60px 140px;
+    padding: var(--section-padding) 120px;
 }
 
 .contact-container .title {
@@ -526,73 +535,77 @@ button::after {
 }
 
 .contact-container .title h2 {
+    display: flex;
+    gap: 20px;
     font-size: 3rem;
-    font-weight: 100;
-    margin-top: 0px;
-    margin-bottom: 25px;
+    /* font-weight: 100; */
 }
 
-.contact-container .title img {
-    height: 35px;
-    margin-bottom: 10px;
-    padding-right: 21px;
+.contact-container .title h2::after {
+    content: "";
+    height: 1em;
+    width: 1em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/mashkanta/yechiel_pic12.png);
 }
 
 .details-container .form-container {
     display: flex;
     justify-content: space-between;
+    gap: 2.5em;
 }
 
-.details-container .form-container .side-one {
+.details-container .form-container .side-one,
+.side-two {
     width: 50%;
     display: flex;
     flex-direction: column;
+    gap: 2em;
 }
 
-.details-container .form-container .side-two {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    /* align-items: flex-end; */
-}
-
-.details-container .form-container input {
+.details-container .form-container input,
+textarea {
     padding: 20px;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     border: 2px solid #444141;
     height: 70px;
-    border-radius: 30px;
-    margin: 15px 20px;
+    border-radius: 20px;
 }
 
-.details-container .form-container input.content {
+.details-container .form-container textarea.content {
     height: 170px;
 }
 
 .details-container .form-container .form-btn {
-    margin: 15px 20px;
-    border: none;
-    background-color: var(--btn-color);
-    width: 300px;
-    height: 70px;
-    border-radius: 30px;
-    font-size: 2.5rem;
-    color: white;
-    align-self: end;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border: none;
+    background-color: var(--btn-color);
+    width: 50%;
+    height: 70px;
+    border-radius: 20px;
+    font-size: 2.5rem;
+    color: white;
+    align-self: end;
+}
+
+.details-container .form-container .form-btn::after {
+    content: "";
+    height: 1em;
+    width: 1em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/mashkanta/yechiel_pic37.png);
 }
 
 .details-container .form-container .form-btn:hover {
     cursor: pointer;
     background-color: rgb(171, 27, 36);
-}
-
-.details-container .form-container .form-btn img {
-    height: 25px;
-    margin-top: 10px;
-    margin-right: 10px;
 }
 
 /* ---- banks-imgs ---- */

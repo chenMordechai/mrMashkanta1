@@ -90,6 +90,23 @@ html {
     font-size: 1.5rem;
 } */
 /* recommend-container */
+.recommends-container .carousel {
+    position: relative;
+    overflow: hidden;
+
+    /* width: 100vw; */
+    /* height: 250px; */
+    height: 34vw;
+    min-height: 225px;
+}
+
+.cards-container .card {
+    /* width: clamp(265px, 40vw); */
+    width: 40vw;
+    min-width: 265px;
+    height: 34vw;
+    min-height: 225px;
+}
 
 /* ---- contact ---- */
 

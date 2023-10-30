@@ -29,8 +29,14 @@ function renderAllRecommends() {
     let strHtml = '';
     const recommends = getAllRecommends()
     for (var i = 0; i < recommends.length; i++) {
-        strHtml += `<div class="card" ><div class="card-details">${recommends[i].id} ${recommends[i].text}</div></div>`
+        strHtml += `<div class="card"  >
+                        <div class="card-details" style="background-image:"url(../img/recommends/${recommends[i].id}.jpg)">
+                            ${recommends[i].id} ${recommends[i].text}
+                           
+                        </div>
+                    </div>`
     }
+    // <img src="img/recommends/${recommends[i].id}.jpg"/>
     document.querySelector('.cards-container').innerHTML = strHtml
 }
 
@@ -70,29 +76,19 @@ function addTouchListeners() {
 }
 
 function onDown(ev) {
-    console.log('down')
     gIsMoving = true
     gInitPos = ev.pageX
 
     const trans = gElcardsContainer.style.transform
-    console.log('trans:', trans)
     gTransform = +trans.substring(trans.indexOf('(') + 1, trans.indexOf('p'))
-    // console.log('x:', x)
-    // currTransform = +x
-    // currTransform = gLastTransform
-
-
 }
 
 function onMove(ev) {
     if (!gIsMoving) return
-    console.log('move:')
+
     const currPos = ev.pageX
     var diff = currPos - gInitPos
-    // console.log('diff:', diff)
-    // console.log('newTrans + diff:', newTrans + diff)
     gElcardsContainer.style.transform = `translateX(${gTransform + diff}px)`
-
 }
 
 function onUp() {

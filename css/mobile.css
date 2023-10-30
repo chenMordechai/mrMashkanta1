@@ -8,7 +8,7 @@
 }
 
 html {
-    /* font-size: 12px; */
+    font-size: 12px;
 }
 
 /* ---- contact-modal ---- */
@@ -214,6 +214,20 @@ body.open-menu .screen {
 /* recommend-container */
 
 /* ---- contact ---- */
+
+.contact-container {
+    padding: var(--section-padding);
+}
+
+.details-container .form-container {
+    flex-direction: column;
+    gap: 2em;
+}
+
+.details-container .form-container .side-one,
+.side-two {
+    width: 100%;
+}
 
 /* ---- banks-imgs ---- */
 
