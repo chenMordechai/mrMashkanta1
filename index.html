@@ -15,12 +15,12 @@
     <title>מר משכנתא - יחיאל מרדכי</title>
 </head>
 
-<body onload="init() ">
-    <section class="screen" onclick="toggleScreen()"></section>
+<body onload="onInit()">
+    <section class="screen" onclick="onToggleScreen()"></section>
 
     <!-- contact-modal -->
     <section class="contact-modal">
-        <button onclick="closeContactModal()" class="close-contact-modal"><i class="fa-solid fa-x"></i></button>
+        <button onclick="onCloseContactModal()" class="close-contact-modal"><i class="fa-solid fa-x"></i></button>
         <h3 class="details-title">לשיחת ייעוץ <span>חינם</span> השאירו פרטים!</h3>
         <form action="" class="form-container">
             <input type="text" placeholder="שם מלא">
@@ -46,7 +46,7 @@
                 <li> <a href="#contact">צור קשר</a></li>
             </ul>
         </nav>
-        <button class="menu-btn" onclick="toggleScreen()"><span></span></button>
+        <button class="menu-btn" onclick="onToggleScreen()"><span></span></button>
     </section>
 
     <!-- cover-img -->
@@ -241,8 +241,8 @@
     </section> -->
 
 
-    <script src="js/service.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/service.js"></script> -->
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

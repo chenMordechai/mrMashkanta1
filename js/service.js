@@ -1,4 +1,11 @@
-'use strict'
+
+export const service = {
+    createRecommends,
+    getAllRecommends,
+    getNumOfRecommends,
+    getRecommends,
+    changeRecommendsOrder
+}
 
 let gBanksNames;
 let gBanksRange = 0
@@ -73,6 +80,7 @@ function changeRecommendsOrder(diff) {
     }
 }
 
+//////////////////////////////////////////////////////////////
 
 function createBanksNames() {
     gBanksNames = ['hapoalim', 'jerusalem', 'discont', 'leumi', 'tefahot', 'massad']

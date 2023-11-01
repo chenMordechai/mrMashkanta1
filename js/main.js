@@ -1,4 +1,8 @@
-'use strict'
+import { service } from './service.js'
+
+window.onInit = onInit
+window.onCloseContactModal = onCloseContactModal
+window.onToggleScreen = onToggleScreen
 
 let gBanksIntervel;
 let gIsContactModalOpen = false;
@@ -9,13 +13,14 @@ let gInitPos = null
 let gIsMoving = false
 let gTransform = 100
 
-function init() {
-    createRecommends()
+
+function onInit() {
+    service.createRecommends()
     renderAllRecommends()
     addListeners()
     // renderRecommends()
 
-    // setTimeout(openContactModal, 3000)
+    setTimeout(openContactModal, 3000)
     // openContactModal()
 
     // createBanksNames()
@@ -27,7 +32,7 @@ function init() {
 
 function renderAllRecommends() {
     let strHtml = '';
-    const recommends = getAllRecommends()
+    const recommends = service.getAllRecommends()
     for (var i = 0; i < recommends.length; i++) {
         strHtml += `<div class="card"  >
                         <div class="card-details" style="background-image:"url(../img/recommends/${recommends[i].id}.jpg)">
@@ -128,7 +133,7 @@ function moveBanks() {
 
 // ------------------------------------------------------------------
 
-function toggleScreen() {
+function onToggleScreen() {
     if (gIsContactModalOpen) {
         document.querySelector('.contact-modal').style.display = 'none';
         document.body.classList.toggle('open-contact-modal');
@@ -149,7 +154,7 @@ function openContactModal() {
     gIsContactModalOpen = true;
 }
 
-function closeContactModal() {
+function onCloseContactModal() {
     document.querySelector('.contact-modal').style.display = 'none';
     document.body.classList.remove('open-contact-modal');
     gIsContactModalOpen = false;
