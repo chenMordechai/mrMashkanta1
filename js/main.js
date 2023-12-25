@@ -21,8 +21,8 @@ function onInit() {
     addListeners()
     // renderRecommends()
 
-    // setTimeout(openContactModal, 3000)
-    openContactModal()
+    setTimeout(openContactModal, 3000)
+    // openContactModal()
 
     // createBanksNames()
     // renderBanksImges()
