@@ -141,7 +141,8 @@ body.open-menu .screen {
 
 /* ---- cover-img ---- */
 .cover-img {
-    height: 90vw;
+    background-image: url(../img/mashkanta/yechiel_mobile_pic2.png);
+    height: 70vh;
 }
 /* ---- title ---- */
 
