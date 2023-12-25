@@ -51,7 +51,7 @@ function sendMail(ev) {
 
     emailjs.send(serviceId, templateId, params)
         .then(res => {
-            alert('Email Sent Successfully!')
+            alert('הבקשה נשלחה בהצלחה')
             onCloseContactModal()
         })
         .catch(err => {
