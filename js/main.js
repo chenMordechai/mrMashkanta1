@@ -20,7 +20,7 @@ function onInit() {
     addListeners()
     // renderRecommends()
 
-    setTimeout(openContactModal, 3000)
+    // setTimeout(openContactModal, 3000)
     // openContactModal()
 
     // createBanksNames()
@@ -35,9 +35,8 @@ function renderAllRecommends() {
     const recommends = service.getAllRecommends()
     for (var i = 0; i < recommends.length; i++) {
         strHtml += `<div class="card"  >
-                        <div class="card-details" style="background-image:"url(../img/recommends/${recommends[i].id}.jpg)">
-                            ${recommends[i].id} ${recommends[i].text}
-                           
+                        <div class="card-details">         
+                        <img src="${recommends[i].imgUrl}" alt="" />         
                         </div>
                     </div>`
     }

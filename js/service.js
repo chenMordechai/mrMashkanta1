@@ -20,40 +20,130 @@ function createRecommends() {
     gRecommends = [
         {
             id: gNextId++,
-            names: 'אבי ולבנה בוקובזה',
-            text: 'תותח מושלם וכו וכו',
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488436/10_ww1ppk.jpg'
 
         },
         {
             id: gNextId++,
-            names: 'שירה ואוראל חגי',
-            text: 'מדהים מושלם וכו וכו',
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488435/8_nsmooc.jpg'
 
         },
         {
             id: gNextId++,
-            names: 'שירה ואוראל חגי',
-            text: ' תותח מושלם וכו וכו',
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488434/6_p59dji.jpg'
 
         },
         {
             id: gNextId++,
-            names: 'שירה ואוראל חגי',
-            text: 'מדהים מושלם וכו וכו',
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488432/5_hbnhqf.jpg'
 
         },
         {
             id: gNextId++,
-            names: 'שירה ואוראל חגי',
-            text: 'תותח מושלם וכו וכו',
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488430/7_t5mtbz.jpg'
 
         },
         {
             id: gNextId++,
-            names: 'שירה ואוראל חגי',
-            text: 'מדהים מושלם וכו וכו',
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488428/9_e1vlrs.jpg'
 
-        }
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488426/19_rmq73g.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488426/24_llx6mn.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488423/4_zi9taf.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488422/14_zmnyyc.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488422/18_ymm0ci.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488422/3_qy0c3f.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488421/17_sjgioy.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488421/2_r7sz85.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488420/1_fsw9om.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488419/22_a1nso6.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488416/16_uhd1gz.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488416/23_gihnq4.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488413/15_rrwrls.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488411/13_xrv0nz.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488411/11_ikqssz.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488411/21_iadv0l.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488411/12_owjjfs.jpg'
+
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488409/20_wu7out.jpg'
+
+        },
+        // {
+        //     id: gNextId++,
+        //     imgUrl:''
+
+        // },
+
     ]
 
 

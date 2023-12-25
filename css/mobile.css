@@ -4,7 +4,7 @@
 
 :root {
     --main-navbar-height: 130px;
-    --section-padding: 50px;
+    --section-padding: 20px;
 }
 
 html {
@@ -198,7 +198,7 @@ body.open-menu .screen {
 }
 
 .services-container .services img {
-    height: 80px;
+    height: 100px;
 }
 
 /* process-container */
