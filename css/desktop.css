@@ -481,6 +481,7 @@ button::after {
     display: flex;
 
     /* touch-action: none; */
+    touch-action: pan-y;
     transform: translateX(-180px);
 }
 
