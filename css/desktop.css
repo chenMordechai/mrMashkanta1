@@ -131,6 +131,7 @@ button.form-btn {
     font-weight: bold;
     font-size: var(--header-font-size);
     height: max-content;
+    justify-content: center;
 }
 
 body.open-contact-modal .screen {
@@ -457,7 +458,7 @@ button::after {
     flex-direction: column;
     gap: 2.5em;
     /* box-shadow: 0px 0px 21px 5px rgba(0, 0, 0, 0.75); */
-    padding: var(--section-padding) 0px;
+    padding: 60px 0px;
     background-image: linear-gradient(to right, #e7d8bb, #bb9343);
 }
 
@@ -479,8 +480,8 @@ button::after {
     left: 20px;
     display: flex;
 
-    touch-action: none;
-    /* transform: translateX(-180px); */
+    /* touch-action: none; */
+    transform: translateX(-180px);
 }
 
 .cards-container .card {

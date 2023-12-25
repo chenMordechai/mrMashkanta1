@@ -23,10 +23,10 @@
     <section class="contact-modal">
         <button onclick="onCloseContactModal()" class="close-contact-modal"><i class="fa-solid fa-x"></i></button>
         <h3 class="details-title">לשיחת ייעוץ <span>חינם</span> השאירו פרטים!</h3>
-        <form class="form-container">
-            <input id="sender-name" type="text" placeholder="שם">
-            <input id="sender-phone" type="tel" placeholder="טלפון">
-            <input id="sender-email" type="email" placeholder="אימייל">
+        <form class="form-container" onsubmit="sendMail(event)">
+            <input id="sender-name" type="text" required placeholder="*שם">
+            <input id="sender-phone" type="tel" required placeholder="טלפון*">
+            <input id="sender-email" type="email" required placeholder="*אימייל">
             <textarea id="content" class="content" placeholder="תוכן ההודעה"></textarea>
             <button class="form-btn">תחזרו אלי</button>
         </form>
@@ -106,7 +106,8 @@
     <section class="mini-contact-container">
 
         <h2>ליעוץ ראשוני ללא התחייבות </h2>
-        <button>התקשרו עכשיו </button>
+        <button> <a href="tel:+972507178844">התקשרו עכשיו</a></button>
+        <a href="tel:+972507178844">050-7178844</a>
     </section>
 
     <!-- about-container -->
@@ -203,9 +204,9 @@
         <div class="details-container">
             <form action="" class="form-container" onsubmit="sendMail(event)">
                 <div class="side-one">
-                    <input id="sender-name" type="text" placeholder="שם">
-                    <input id="sender-phone" type="tel" placeholder="טלפון">
-                    <input id="sender-email" type="email" placeholder="אימייל">
+                    <input id="sender-name" type="text" required placeholder="*שם">
+                    <input id="sender-phone" type="tel" required placeholder="טלפון*">
+                    <input id="sender-email" type="email" required placeholder="*אימייל">
                 </div>
                 <div class="side-two">
                     <textarea id="content" class="content" placeholder="תוכן ההודעה" cols="30" rows="10"></textarea>
@@ -241,17 +242,6 @@
         </div>
     </section> -->
 
-
-    <script>
-
-        // const form = document.querySelector('.form-container')
-        // const name = document.querySelector('.name')
-        // const phone = document.querySelector('.phone')
-        // const email = document.querySelector('.email')
-        // const content = document.querySelector('.content')
-
-
-    </script>
     <!-- <script src="js/service.js"></script> -->
     <script type="module" src="js/main.js"></script>
 

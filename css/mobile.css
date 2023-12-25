@@ -4,7 +4,7 @@
 
 :root {
     --main-navbar-height: 130px;
-    --section-padding: 20px;
+    --section-padding: 50px 20px;
 }
 
 html {
@@ -12,6 +12,10 @@ html {
 }
 
 /* ---- contact-modal ---- */
+
+.contact-modal {
+    width: 85vw;
+}
 
 /* ---- navbar ---- */
 .main-navbar {

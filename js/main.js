@@ -52,9 +52,11 @@ function sendMail(ev) {
     emailjs.send(serviceId, templateId, params)
         .then(res => {
             alert('Email Sent Successfully!')
+            onCloseContactModal()
         })
         .catch(err => {
             console.log('err', err)
+            onCloseContactModal()
         })
 }
 
@@ -76,21 +78,21 @@ function renderAllRecommends() {
     document.querySelector('.cards-container').innerHTML = strHtml
 }
 
-function renderRecommends() {
-    let strHtml = '';
-    const recommends = getRecommends()
-    const numOfRecommends = getNumOfRecommends();
-    for (var i = 0; i < numOfRecommends; i++) {
-        strHtml += `<div class="recommend-container" ><div class="recommend">${recommends[i].id} ${recommends[i].text}</div></div>`
-    }
-    document.querySelector('.recommends').innerHTML = strHtml
+// function renderRecommends() {
+//     let strHtml = '';
+//     const recommends = getRecommends()
+//     const numOfRecommends = getNumOfRecommends();
+//     for (var i = 0; i < numOfRecommends; i++) {
+//         strHtml += `<div class="recommend-container" ><div class="recommend">${recommends[i].id} ${recommends[i].text}</div></div>`
+//     }
+//     document.querySelector('.recommends').innerHTML = strHtml
 
-}
+// }
 
-function renderMoreRecommends(diff) {
-    changeRecommendsOrder(diff)
-    renderRecommends()
-}
+// function renderMoreRecommends(diff) {
+//     changeRecommendsOrder(diff)
+//     renderRecommends()
+// }
 
 ///////////////////////////////////////////////////////////////////////////////
 
