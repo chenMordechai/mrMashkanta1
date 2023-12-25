@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://kit.fontawesome.com/3b2ba1220a.js" crossorigin="anonymous"></script>
     <title>מר משכנתא - יחיאל מרדכי</title>
 </head>
@@ -22,11 +23,11 @@
     <section class="contact-modal">
         <button onclick="onCloseContactModal()" class="close-contact-modal"><i class="fa-solid fa-x"></i></button>
         <h3 class="details-title">לשיחת ייעוץ <span>חינם</span> השאירו פרטים!</h3>
-        <form action="" class="form-container">
-            <input type="text" placeholder="שם מלא">
-            <input type="tel" placeholder="טלפון">
-            <input type="email" placeholder="אימייל">
-            <textarea class="content" placeholder="תוכן ההודעה"></textarea>
+        <form class="form-container">
+            <input id="sender-name" type="text" placeholder="שם">
+            <input id="sender-phone" type="tel" placeholder="טלפון">
+            <input id="sender-email" type="email" placeholder="אימייל">
+            <textarea id="content" class="content" placeholder="תוכן ההודעה"></textarea>
             <button class="form-btn">תחזרו אלי</button>
         </form>
     </section>
@@ -200,14 +201,14 @@
 
         </div>
         <div class="details-container">
-            <form action="" class="form-container">
+            <form action="" class="form-container" onsubmit="sendMail(event)">
                 <div class="side-one">
-                    <input type="text" placeholder="שם">
-                    <input type="tel" placeholder="טלפון">
-                    <input type="email" placeholder="אימייל">
+                    <input id="sender-name" type="text" placeholder="שם">
+                    <input id="sender-phone" type="tel" placeholder="טלפון">
+                    <input id="sender-email" type="email" placeholder="אימייל">
                 </div>
                 <div class="side-two">
-                    <textarea class="content" placeholder="תוכן ההודעה" cols="30" rows="10"></textarea>
+                    <textarea id="content" class="content" placeholder="תוכן ההודעה" cols="30" rows="10"></textarea>
                     <button class="form-btn">שלח </button>
 
                 </div>
@@ -241,8 +242,19 @@
     </section> -->
 
 
+    <script>
+
+        // const form = document.querySelector('.form-container')
+        // const name = document.querySelector('.name')
+        // const phone = document.querySelector('.phone')
+        // const email = document.querySelector('.email')
+        // const content = document.querySelector('.content')
+
+
+    </script>
     <!-- <script src="js/service.js"></script> -->
     <script type="module" src="js/main.js"></script>
+
 </body>
 
 </html>

@@ -109,17 +109,18 @@ button {
 }
 
 .contact-modal form input,
-textarea,
+.contact-modal form textarea,
 button.form-btn {
     height: 45px;
     border-radius: 4px;
     border: 1px solid black;
     padding: 10px;
     font-size: 1.3rem;
+    text-align: right;
 }
 
 .contact-modal form textarea {
-    height: 70px;
+    height: 100px;
 }
 
 .contact-modal form button {
@@ -406,6 +407,7 @@ button::after {
     /* background-color: black; */
     color: white;
     padding: var(--section-padding);
+    padding-bottom: 50px;
 }
 
 .process-container h3 {
@@ -556,6 +558,7 @@ button::after {
     display: flex;
     justify-content: space-between;
     gap: 2.5em;
+    /* text-align: right; */
 }
 
 .details-container .form-container .side-one,
@@ -567,12 +570,13 @@ button::after {
 }
 
 .details-container .form-container input,
-textarea {
+.details-container .form-container textarea {
     padding: 20px;
     font-size: 1.8rem;
     border: 2px solid #444141;
     height: 70px;
     border-radius: 20px;
+    text-align: right;
 }
 
 .details-container .form-container textarea.content {

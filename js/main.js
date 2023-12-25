@@ -3,6 +3,7 @@ import { service } from './service.js'
 window.onInit = onInit
 window.onCloseContactModal = onCloseContactModal
 window.onToggleScreen = onToggleScreen
+window.sendMail = sendMail
 
 let gBanksIntervel;
 let gIsContactModalOpen = false;
@@ -21,12 +22,43 @@ function onInit() {
     // renderRecommends()
 
     // setTimeout(openContactModal, 3000)
-    // openContactModal()
+    openContactModal()
 
     // createBanksNames()
     // renderBanksImges()
     // gBanksIntervel = setInterval(moveBanks, 2500)
+
 }
+
+// -------------------------------------------------------------
+
+function sendMail(ev) {
+    ev.preventDefault()
+    console.log('sendMail')
+
+    emailjs.init("8H1JHaiQbVNsq23Hb")
+
+    const params = {
+        senderName: document.querySelector('#sender-name').value,
+        senderPhone: document.querySelector('#sender-phone').value,
+        senderEmail: document.querySelector('#sender-email').value,
+        content: document.querySelector('#content').value,
+    }
+    console.log('params:', params)
+
+    const serviceId = 'service_to07m1c'
+    const templateId = 'template_e8za9ii'
+
+    emailjs.send(serviceId, templateId, params)
+        .then(res => {
+            alert('Email Sent Successfully!')
+        })
+        .catch(err => {
+            console.log('err', err)
+        })
+}
+
+
 
 // -------------------------------------------------------------
 
