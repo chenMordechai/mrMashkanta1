@@ -138,6 +138,23 @@ body.open-contact-modal .screen {
     display: block;
 }
 
+/* ---- whatsapp icon ---- */
+
+.whatsapp-container {
+    /* background-color: red; */
+    position: fixed;
+    z-index: 20;
+    bottom: 20px;
+    right: 20px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.whatsapp-container img {
+    height: 100%;
+}
+
 /* ---- navbar ---- */
 
 .main-navbar {
