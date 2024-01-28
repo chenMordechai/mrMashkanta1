@@ -18,7 +18,7 @@ let gTransform = 100
 function onInit() {
     service.createRecommends()
     renderAllRecommends()
-    addListeners()
+    // addListeners()
     // renderRecommends()
 
     setTimeout(openContactModal, 3000)
@@ -68,14 +68,14 @@ function renderAllRecommends() {
     let strHtml = '';
     const recommends = service.getAllRecommends()
     for (var i = 0; i < recommends.length; i++) {
-        strHtml += `<div class="card"  >
+        strHtml += `<li class="card">
                         <div class="card-details">         
                         <img src="${recommends[i].imgUrl}" alt="" />         
                         </div>
-                    </div>`
+                    </li>`
     }
     // <img src="img/recommends/${recommends[i].id}.jpg"/>
-    document.querySelector('.cards-container').innerHTML = strHtml
+    document.querySelector('.carousel').innerHTML = strHtml
 }
 
 // function renderRecommends() {

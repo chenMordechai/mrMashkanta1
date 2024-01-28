@@ -90,14 +90,18 @@ html {
     font-size: 1.5rem;
 } */
 /* recommend-container */
+.recommends-container .wrapper .carousel {
+    /* grid-auto-columns: calc((100% / 3) - 10px); */
+}
+
 .recommends-container .carousel {
-    position: relative;
-    overflow: hidden;
+    /* position: relative;
+    overflow: hidden; */
 
     /* width: 100vw; */
     /* height: 250px; */
     /* height: 34vw; */
-    min-height: 300px;
+    /* min-height: 300px; */
 }
 
 .cards-container .card {

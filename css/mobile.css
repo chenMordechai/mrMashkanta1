@@ -219,6 +219,10 @@ body.open-menu .screen {
 
 /* recommend-container */
 
+.recommends-container .wrapper .carousel {
+    /* grid-auto-columns: calc((100% / 1.3)); */
+}
+
 /* ---- contact ---- */
 
 .contact-container {
