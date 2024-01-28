@@ -17,7 +17,9 @@ let gTransform = 100
 
 function onInit() {
     service.createRecommends()
+    service.createRecommendsVideo()
     renderAllRecommends()
+    renderAllRecommendsVideo()
     // addListeners()
     // renderRecommends()
 
@@ -78,16 +80,21 @@ function renderAllRecommends() {
     document.querySelector('.carousel').innerHTML = strHtml
 }
 
-// function renderRecommends() {
-//     let strHtml = '';
-//     const recommends = getRecommends()
-//     const numOfRecommends = getNumOfRecommends();
-//     for (var i = 0; i < numOfRecommends; i++) {
-//         strHtml += `<div class="recommend-container" ><div class="recommend">${recommends[i].id} ${recommends[i].text}</div></div>`
-//     }
-//     document.querySelector('.recommends').innerHTML = strHtml
-
-// }
+function renderAllRecommendsVideo() {
+    let strHtml = '';
+    const recommends = service.getAllRecommendsVideo()
+    for (var i = 0; i < recommends.length; i++) {
+        strHtml += `<li class="card">
+                        <div class="card-details">         
+                        <video controls>
+                           <source src="${recommends[i].videoUrl}" type="video/mp4">
+                        </video>       
+                        </div>
+                    </li>`
+    }
+    // <img src="img/recommends/${recommends[i].id}.jpg"/>
+    document.querySelector('.carousel.video').innerHTML = strHtml
+}
 
 // function renderMoreRecommends(diff) {
 //     changeRecommendsOrder(diff)

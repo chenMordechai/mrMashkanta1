@@ -1,10 +1,13 @@
 
 export const service = {
     createRecommends,
+    createRecommendsVideo,
     getAllRecommends,
     getNumOfRecommends,
     getRecommends,
-    changeRecommendsOrder
+    changeRecommendsOrder,
+    getAllRecommendsVideo
+
 }
 
 let gBanksNames;
@@ -13,6 +16,7 @@ let gNumOfBanks = 6
 let gNextId = 1
 
 let gRecommends;
+let gRecommendsVideo;
 let gNumOfRecommends = 3;
 let gRecommendsRange = 0
 
@@ -20,137 +24,205 @@ function createRecommends() {
     gRecommends = [
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488436/10_ww1ppk.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466895/20220516_104705_kbh2s0.jpg'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488435/8_nsmooc.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466827/%D7%A2%D7%95%D7%A8%D7%9A_%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA_Y1Ywq8_c1i9qk.png'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488434/6_p59dji.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466823/%D7%A2%D7%95%D7%A8%D7%9A_%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA_LcMOT9_eaqfck.png'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488432/5_hbnhqf.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466823/%D7%A2%D7%95%D7%A8%D7%9A_%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA_zvaCCp_dyioof.png'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488430/7_t5mtbz.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466822/%D7%A2%D7%95%D7%A8%D7%9A_%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA_tcEu9D_pikaii.png'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488428/9_e1vlrs.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466821/%D7%A2%D7%95%D7%A8%D7%9A_%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA_XUXQFh_t3jglp.png'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488426/19_rmq73g.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466820/%D7%A2%D7%95%D7%A8%D7%9A_%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA_u31OU3_jmxtyw.png'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488426/24_llx6mn.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466816/%D7%A2%D7%95%D7%A8%D7%9A_%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA_ciiCWI_pmoodl.png'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488423/4_zi9taf.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466815/%D7%A2%D7%95%D7%A8%D7%9A_%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA_bJ5Kbu_t6uwyq.png'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488422/14_zmnyyc.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466807/%D7%A2%D7%95%D7%A8%D7%9A_%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA_MX5S5o_zyzyfi.png'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488422/18_ymm0ci.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466805/%D7%A2%D7%95%D7%A8%D7%9A_%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA_EbrAHj_v4y23y.png'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488422/3_qy0c3f.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466803/%D7%A2%D7%95%D7%A8%D7%9A_%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA_sjxN8s_ckrm94.png'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488421/17_sjgioy.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466787/IMG-20231109-WA0071_ueyrmv.jpg'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488421/2_r7sz85.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466787/WhatsApp_Image_2024-01-28_at_20.21.11_bpxbup.jpg'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488420/1_fsw9om.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466787/IMG-20240122-WA0061_hasqwr.jpg'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488419/22_a1nso6.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466785/20231105_133918_f1pauw.jpg'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488416/16_uhd1gz.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466785/IMG-20231226-WA0011_wd44vc.jpg'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488416/23_gihnq4.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466783/20230906_175021_vubaqj.jpg'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488413/15_rrwrls.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466782/20231127_142957_oym2rm.jpg'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488411/13_xrv0nz.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466782/IMG-20230827-WA0016_tyv0zl.jpg'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488411/11_ikqssz.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466781/IMG-20220529-WA0053_qfwx8p.jpg'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488411/21_iadv0l.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466781/IMG-20230906-WA0088_npyd5d.jpg'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488411/12_owjjfs.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466777/IMG-20230607-WA0023_mkkfmh.jpg'
         },
         {
             id: gNextId++,
-            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1703488409/20_wu7out.jpg'
-
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466773/20221027_111237_rlzgwe.jpg'
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466770/20231214_145500_wuezzu.jpg'
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466769/20221025_103628_yrbgwu.jpg'
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466752/20230712_183300_egunjm.jpg'
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466749/20230116_103648_rokkiq.jpg'
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466746/20221012_112020_qdfdea.jpg'
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466740/20221003_183910_m5k2be.jpg'
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466739/20221117_094700_r7qwzk.jpg'
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466738/20220531_100952_tnhzhj.jpg'
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466736/20221110_125001_ls9msu.jpg'
+        },
+        {
+            id: gNextId++,
+            imgUrl: 'https://res.cloudinary.com/dnluclrao/image/upload/v1706466731/20220907_112350_kxidf9.jpg'
         },
         // {
         //     id: gNextId++,
-        //     imgUrl:''
-
+        //     imgUrl: ''
         // },
-
     ]
+    console.log('gRecommends:', gRecommends)
 
 
 }
 
+function createRecommendsVideo() {
+    gRecommendsVideo = [
+        {
+            id: gNextId++,
+            videoUrl: 'https://res.cloudinary.com/dnluclrao/video/upload/v1706468536/20230725_133456_oyysif.mp4'
+        },
+        {
+            id: gNextId++,
+            videoUrl: 'https://res.cloudinary.com/dnluclrao/video/upload/v1706468523/20221110_125137_bexh6r.mp4'
+        },
+        {
+            id: gNextId++,
+            videoUrl: 'https://res.cloudinary.com/dnluclrao/video/upload/v1706468490/20231105_134236_hqnvay.mp4'
+        },
+        {
+            id: gNextId++,
+            videoUrl: 'https://res.cloudinary.com/dnluclrao/video/upload/v1706468489/20230424_135224_tn3ovo.mp4'
+        },
+        {
+            id: gNextId++,
+            videoUrl: 'https://res.cloudinary.com/dnluclrao/video/upload/v1706468483/20221003_184325_m5cset.mp4'
+        },
+        {
+            id: gNextId++,
+            videoUrl: 'https://res.cloudinary.com/dnluclrao/video/upload/v1706468449/20230116_103832_h1pbjy.mp4'
+        },
+        {
+            id: gNextId++,
+            videoUrl: 'https://res.cloudinary.com/dnluclrao/video/upload/v1706468425/20230712_184413_fbs9l1.mp4'
+        },
+        {
+            id: gNextId++,
+            videoUrl: 'https://res.cloudinary.com/dnluclrao/video/upload/v1706468374/20220907_113506_adzffd.mp4'
+        },
+        {
+            id: gNextId++,
+            videoUrl: 'https://res.cloudinary.com/dnluclrao/video/upload/v1706468307/20230508_114716_ccas7i.mp4'
+        },
+        {
+            id: gNextId++,
+            videoUrl: 'https://res.cloudinary.com/dnluclrao/video/upload/v1706468301/20231211_101952_vdllfh.mp4'
+        },
+        {
+            id: gNextId++,
+            videoUrl: 'https://res.cloudinary.com/dnluclrao/video/upload/v1706468251/20231127_143214_luelge.mp4'
+        },
+    ]
+}
+
 function getAllRecommends() {
     return gRecommends
+}
+
+function getAllRecommendsVideo() {
+    return gRecommendsVideo
 }
 
 function getNumOfRecommends() {
