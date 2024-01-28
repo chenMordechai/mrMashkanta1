@@ -378,7 +378,7 @@ button::after {
 .services-container {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 3em;
 
     background-image: url(../img/mashkanta/yechiel_pic11.png);
     background-size: cover;
@@ -430,7 +430,7 @@ button::after {
 
 .process-container h3 {
     font-size: 3rem;
-    font-weight: 400;
+    /* font-weight: 400; */
 }
 
 .process-container .work-process {
@@ -544,7 +544,7 @@ button::after {
 .contact-container {
     display: flex;
     flex-direction: column;
-    gap: 2.5em;
+    gap: 3em;
 
     background-color: #e3e3e3;
     padding: var(--section-padding) 120px;
@@ -610,7 +610,7 @@ button::after {
     border: none;
     background-color: var(--btn-color);
     width: 50%;
-    height: 70px;
+    height: 60px;
     border-radius: 20px;
     font-size: 2.5rem;
     color: white;
